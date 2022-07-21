@@ -1,5 +1,8 @@
-package org.SpringAssignment1;
+package org.SpringAssignment1_part2;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
     private String city;
@@ -50,5 +53,16 @@ public class Address {
     }
 
     public Address() {
+        city = "Oured";
+        state = "N/A";
+        country = "Osea";
+        zipcode = "45678";
+    }
+
+    public Address(String city, String state, String country, String zipcode) {
+        this.city = city;
+        this.state = state;
+        this.country = country;
+        this.zipcode = zipcode;
     }
 }

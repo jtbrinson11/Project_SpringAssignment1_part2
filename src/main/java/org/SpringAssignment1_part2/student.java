@@ -1,12 +1,19 @@
-package org.SpringAssignment1;
+package org.SpringAssignment1_part2;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class student {
 
     private int id;
     private String name;
+    @Autowired
     private List<Phone> ph;
+    @Autowired
     private Address add;
 
     public int getId() {
@@ -52,5 +59,14 @@ public class student {
     }
 
     public student() {
+        id = 12345;
+        name = "name";
+    }
+
+    public student(int id, String name, List<Phone> ph, Address add) {
+        this.id = id;
+        this.name = name;
+        this.ph = ph;
+        this.add = add;
     }
 }
